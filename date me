@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head> 
+	<title>Eli Tyre</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+
+<body>
+
+	<nav>
+		<ul> 
+			<li>About</li>
+			<li>Personal History</li>
+			<!--<li>Writing</li>
+			<a href="conversational-faciliation.html" class="button"><li>Conversational Faciliation</li></a>
+			<a href="https://github.com/Etyre" class="button"><li>Software</li></a>
+			<li>Consulting and Coaching</li>-->
+			<li>Date Me</li>
+			<li>Contact</li>
+		</ul>
+	</nav>
+	
+	<div class="page title">
+		<h1>About</h1>
+	</div>
+	
+	
+<div class="main text">
+	<p> This is the personal website of Eli Tyre.</p>
+		
+	<p>I am an indpendent scholar, working on a diversity of projects. I'm currently based in Berkeley, California.</p>
+	
+	<h2>Long-termist Strategy</h2>
+	
+	<p> My main, and most important, work is my research and writing on global strategy, trying to get a grasp on what is happening in the world that matters in the long run, and what paths exist for humanity surviving the past 2200 and going on to create a safe, sane, civilization. 
+	
+	<!--<p>Most of that work is collected on my blog Heart Head Horizon, with some of it crosposted to LessWrong.</p>
+	
+	<p>I also have a podcast, "Plans and Actions" in which I interview people about their plans to radically improve the world. </p>-->
+	
+	<h2>Discourse</h2>
+	
+	<p> Since 2016, I've spent a consistent chunk of effort studying and developing effective discourse methods, especially methods for espistemically resolving thorny disagreements and bridging deep differences in worldviews. <p> 
+
+	<!--<p> I have a podcast, Cooperative Curiosity, in which I both participate in and mediate good faith (if sometimes heated) conversations, on important topics, between people who strongly disagree, with the aim of both understanding the other's perspective, and actually clarifying what's true.</p>
+	
+	<p>I also own a run Epistemic Mediation which offers conversational facilitation services, for both private important conversations within an org, and for enabling effective communication across intellectual cultures.</p>
+	    
+	<p>There's some writing on my converstational methodologies on LessWrong, but I think that writing rarely conveys the "sense" of those methods, and the podcast is a better place to start. </p> -->
+	
+	<h2>Applied Psycholgy <!--/ Learning Theory--></h2>
+		
+	<p> Over the years, I've explored and experimented all kinds of personal development interventions, especially strategies for efficient learning and maintaining high throughput, 
+		and trying to tease out the underlying psychological mechanisms of the things that work.</p>
+	
+	<p><a href="https://efficacyengineering.wordpress.com/">Efficacy Engineering</a> is 
+		my applied psychology blog and wiki, where I host outlines of my current systems, document some of my learning / meta-learning projects in real time, and generally
+		iterate to a more true and useful ontology of these domains.</p>
+	
+	<h2>Other Stuff</h2>
+	
+	<p><a href="https://musingsandroughdrafts.wordpress.com/">Musings and Rough Drafts</a> is where I post my even-less-polished-than-usual, unrigorous and stream of conciousness thinking. Mostly it seems to be about sociological and cultural trends. </p>
+	
+	<p>I also sometimes write threads on twitter, where my handle is <a href="https://twitter.com/EpistemicHope">@EpistemicHope</a>. I find engaging with the twitter UX pretty anoying, so I also archive virtually all my threads on
+	<a href="https://threadreaderapp.com/user/EpistemicHope">threadreader</a>, so you can read them there without needing to frequent a social media site. This is mostly just my posing questions or making posits about what I'm thinking and reading about.</p> 
+	
+	<p>I'm experimenting with offering coaching, mostly helping clients solve problems and set up effective systems, at $70 an hour. You can book me for that <a href="https://calendly.com/elityre-1/coaching-session?month=2021-03">here</a>.
+	
+	<p> I'm a mediocre software engineer, mostly building tools for my own use. My open sourced projects are on <a href="https://github.com/Etyre">here</a>.
