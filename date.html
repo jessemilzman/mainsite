@@ -7,20 +7,17 @@
 
 
 <body>
-
-	<nav>
-		<ul> 
-			<li><a href="index.html" class="button">About</a></li>
-			<!--<li><a href="personal-history.html" class="button">Personal History</a></li>
-			<li>Writing</li>
-			<a href="conversational-faciliation.html" class="button"><li>Conversational Faciliation</li></a>
-			<a href="https://github.com/Etyre" class="button"><li>Software</li></a>
-			<li>Consulting and Coaching</li>-->
-			<li><a href="bounties.html">Bounties</a></li>
-			<li><a href="date.html" class="button">Date Me</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-	</nav>
+	<!--Navigation bar-->
+	<div id="nav-placeholder">
+	</div>
+	<!--This /\ is where the Nav bar goes on the page.
+	this \/ is the code that goes and gets the nav bar content from nav.html-->
+	<script>
+	$(function(){
+	  $("#nav-placeholder").load("nav.html");
+	});
+	</script>
+	<!--end of Navigation bar-->
 	
 	<div class="page title">
 		<h1>Dating Profile</h1>
