@@ -31,12 +31,18 @@
 	
 	
 	<script>
-		const btnRepos = document.getElementById("btnRepos")
-		bttnRepos.addEventListener("click", getRepos)
-		function = getReops(){
-			alert("test")
+		const btnRepos = document.getElementById("btnRepos");
+		bttnRepos.addEventListener("click", getRepos);
+		function = getRepos(){
+			const url= "https://api.github.com"
+			const response = await fetch(url)
+			const result = await response.json()
+			
+			consol.log(result)
 			
 		}
+		
+		getRepos()
 		
 		
 	</script>
