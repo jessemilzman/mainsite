@@ -34,6 +34,8 @@
 		const btnRepos = document.getElementById("btnRepos");
 		bttnRepos.addEventListener("click", getRepos);
 		async function getRepos(){
+			alert("test")
+			
 			const url= "https://api.github.com"
 			const response = await fetch(url)
 			const result = await response.json()
