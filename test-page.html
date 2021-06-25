@@ -69,9 +69,13 @@
 
 			}
 
-			const data = await getCommits('test');
+			// const data = await getCommits('test');
 			// Make some notes about Await and what it does.
 			// Note that you can only use await inside of an async function.
+			
+			getCommits('test');
+			
+			data = JSON.parse(xhr.responseText)
 
 			console.log(data);
 			
