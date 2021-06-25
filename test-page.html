@@ -26,39 +26,19 @@
 	
 	
 	
-	<button id= 'btnRepos'>Repos</button>
 	
-	
-	
-	<script>
-		const btnRepos = document.getElementById("btnRepos");
-		btnRepos.addEventListener("click", getRepos);
-		async function getRepos(){
-			alert("test")
-			
-			const url= "https://api.github.com"
-			const response = await fetch(url)
-			const result = await response.json()
-			
-			console.log(result)
-			
-		}
-		
-		getRepos()
-		
-		
-	</script>
 	
 	<script>
 		const nameOfThisPage = "test-page.html"
 		
-		function requestUserRepos(username){
+		function getCommits(file){
     
 		    // Create new XMLHttpRequest object
 		    const xhr = new XMLHttpRequest();
 
 		    // GitHub endpoint, dynamically passing in specified username
 		    const url = `https://api.github.com/repos/etyre/elityre.com/commits?path=date.html`;
+			// 'date.html' should ultimately be replaced with '${file}'
 
 		    // Open a new connection, using a GET request via URL endpoint
 		    // Providing 3 arguments (GET/POST, The URL, Async True/False)
@@ -81,12 +61,10 @@
 
 		}
 
-		//function = 
-
 		
 		
 		let d = new Date();
-		document.body.innerHTML = "<p>This page was last updated on "+ "[placeholder]" + "</p>"
+		document.body.innerHTML = "<p>This page was last updated on "+ "[placeholder]" + data+ "</p>"
 	</script>
   
 <body>
