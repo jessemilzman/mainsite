@@ -37,10 +37,17 @@
 		
 		// For the period before my birthday
 		currentMonth = (today.getMonth() + 1)
+
 		currentDay = today.getDay();
-		if (currentMonth == 0 and currentDay < 30) {
+		console.log(currentDay);
+		if (currentMonth == 5 and currentDay < 30) {
 			myAge -= 1;
 		}
+		
+		
+		//if (currentMonth == 0 and currentDay < 30) {
+			//myAge -= 1;
+		//}
 		
 		document.getElementById('age').innerHTML = myAge;
 	</script>
