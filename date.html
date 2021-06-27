@@ -40,14 +40,9 @@
 
 		currentDay = today.getDay();
 		console.log(currentDay);
-		if (currentMonth == 5) {
+		if (currentMonth == 5 && currentDay < 30) {
 			myAge -= 1;
 		}
-		
-		
-		//if (currentMonth == 0 and currentDay < 30) {
-			//myAge -= 1;
-		//}
 		
 		document.getElementById('age').innerHTML = myAge;
 	</script>
