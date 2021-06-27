@@ -31,7 +31,9 @@
 	<p>I'm a straight (if asexual-leaning) man, single and seeking. I was born in <text id="age"></text>.</p>
 	
 	<script>
-		document.getElementById('age').innerHTML = '[test-age]';
+		var today = new Date();
+		
+		document.getElementById('age').innerHTML = today;
 	</script>
 
 	<p>(I look like <a href="personal-photos.html">this</a>.)</p>
