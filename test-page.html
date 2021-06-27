@@ -43,7 +43,7 @@
 		
 
 			// future Eli, this is a function. It is in Arrow syntax. You should learn this.
-			const getCommits = async file => {
+			const getCommits = async pageName => {
 
 
 			    // Create new XMLHttpRequest object
@@ -51,7 +51,7 @@
 
 			    // GitHub endpoint, dynamically passing in specified username
 			    const url = `https://api.github.com/repos/etyre/elityre.com/commits?path=date.html`;
-				// 'date.html' should ultimately be replaced with '${file}'
+				// 'date.html' should ultimately be replaced with '${pageName}'
 
 			    // Open a new connection, using a GET request via URL endpoint
 			    // Providing 3 arguments (GET/POST, The URL, Async True/False)
