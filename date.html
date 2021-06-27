@@ -32,7 +32,16 @@
 	
 	<script>
 		var today = new Date();
+		
 		myAge = today.getFullYear() - 1994;
+		
+		// For the period before my birthday
+		currentMonth = (today.getMonth() + 1)
+		currentDay = today.getDay();
+		if (currentMonth == 0 and currentDay < 30) {
+			myAge -= 1;
+		}
+		
 		document.getElementById('age').innerHTML = myAge;
 	</script>
 
