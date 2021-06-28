@@ -29,54 +29,74 @@
 	
 	
 	<script>
-		const nameOfThisPage = "test-page.html"
-		
-		function getDateFromJSON(array) = {
-			mostRecentEntry = array[0];
+		var urlArray = window.location.href.split("/");
+
+		var nameOfThisPage = urlArray[urlArray.length-1];
+
+		console.log(nameOfThisPage);
+
+		//"test-page.html"
+
+
+		// future Eli, this is a function. It is in Arrow syntax. You should learn this.
+		const getCommits = async pageName => {
+
+			var result = await fetch('https://api.github.com/repos/etyre/elityre.com/commits?path='+ encodeURIComponent(pageName));
+
+			var data = await result.json();
+
+			var timestamp = new Date(data[0].commit.author.date)
+			// the Date function takes a date string, and returns a date object.
+
+			//var month = timestamp.getMonth()
+
+
+			var formattedDate = timestamp.toDateString()
+
+			console.log(formattedDate)
+
 			
-			return mostRecentEntry;
-			
-		}
-			
-		
-		const thisHereFunction = async () => {
-		
-
-			// future Eli, this is a function. It is in Arrow syntax. You should learn this.
-			const getCommits = async pageName => {
 
 
-			    // Create new XMLHttpRequest object
-			    const xhr = new XMLHttpRequest();
+			document.getElementById('last updated').innerHTML = "<p><i>This page was last updated on "+ formattedDate + ".</i></p>";
 
-			    // GitHub endpoint, dynamically passing in specified username
-			    const url = `https://api.github.com/repos/etyre/elityre.com/commits?path=date.html`;
-				// 'date.html' should ultimately be replaced with '${pageName}'
 
-			    // Open a new connection, using a GET request via URL endpoint
-			    // Providing 3 arguments (GET/POST, The URL, Async True/False)
-			    xhr.open('GET', url, true);
 
-			    // When request is received
-			    // Process it here
-			    xhr.onload = function() {
 
-				// Parse API data into JSON
-				const data = JSON.parse(this.response);
 
-				// Log the response
-				// console.log(data);
-				    
-				    let d = new Date();
-				document.body.innerHTML = "<p>This page was last updated on "+ "[placeholder]" +d+ "</p>";
 
-				// Return the JSON object
-				return data;
 
-			    }
+			// // Create new XMLHttpRequest object
+			// const xhr = new XMLHttpRequest();
 
-			    // Send the request to the server
-			    xhr.send();
+			// // GitHub endpoint, dynamically passing in specified username
+			// const url = `https://api.github.com/repos/etyre/elityre.com/commits?path=date.html`;
+			// // 'date.html' should ultimately be replaced with '${pageName}'
+
+			// // Open a new connection, using a GET request via URL endpoint
+			// // Providing 3 arguments (GET/POST, The URL, Async True/False)
+			// xhr.open('GET', url, true);
+
+			// // When request is received
+			// // Process it here
+			// xhr.onload = function() {
+
+			// // Parse API data into JSON
+			// const data = JSON.parse(this.response);
+
+			// // Log the response
+			// // console.log(data);
+				
+			// 	let d = new Date();
+			// document.body.innerHTML = "<p>This page was last updated on "+ "[placeholder]" +d+ "</p>";
+
+			// // Return the JSON object
+			// return data;
+
+			// }
+
+			// // Send the request to the server
+			// xhr.send();
 
 			}
 
@@ -84,16 +104,13 @@
 			// Make some notes about Await and what it does.
 			// Note that you can only use await inside of an async function.
 			
-			getCommits('test');
+			getCommits(nameOfThisPage);
 			
-			console.log(data);
+	
 			
-		}
 		
-		thisHereFunction();
 
-		let d = new Date();
-		document.getElementById('last updated').innerHTML = "<p>This page was last updated on "+ "[placeholder]" +d+ "</p>";
+		
 		</script>
   
 <body>
