@@ -29,14 +29,13 @@
 	
 	
 	<script>
+		
+		// this part gets the file name from the URL.
 		var urlArray = window.location.href.split("/");
 
 		var nameOfThisPage = urlArray[urlArray.length-1];
 
-		console.log(nameOfThisPage);
-
-		//"test-page.html"
-
+		// this part uses the github API to get the last commit data for that file, and then writes a line the HTML body.
 
 		// future Eli, this is a function. It is in Arrow syntax. You should learn this.
 		const getCommits = async pageName => {
@@ -106,11 +105,6 @@
 			
 			getCommits(nameOfThisPage);
 			
-	
-			
-		
-
-		
 		</script>
   
 <body>
