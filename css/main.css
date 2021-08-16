@@ -31,12 +31,12 @@ p {
     line-height: 1.4em;
     color: #333;
     
-footnote {
+.footnote {
     font-size: 1.0em;
     line-height: 1.1em;
 }
     
-.footer {
+footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
