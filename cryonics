@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<head> 
+	<title>Eli Tyre</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-205493387-1"></script>
+	<script>
+  	 window.dataLayer = window.dataLayer || [];
+  	 function gtag(){dataLayer.push(arguments);}
+  	 gtag('js', new Date());
+
+  	 gtag('config', 'UA-205493387-1');
+	</script>
+	
+</head>
+
+
+<body>
+	<!--Navigation bar-->
+	<div id="nav-placeholder">
+	</div>
+	<!--This /\ is where the Nav bar goes on the page.
+	this \/ is the code that goes and gets the nav bar content from nav.html-->
+	<script>
+	$(function(){
+	  $("#nav-placeholder").load("nav.html");
+	});
+	</script>
+	<!--end of Navigation bar-->
+	
+	<div class="page title">
+		<h1>Statement on cryonics</h1>
+	</div>
+	
+	
+<div class="main text">
+	<div>
+    <p>I am currently signed up for neuropreservation through Alcor, funded by a </p>
+
+    <p>I haven't looked into the technology in that much detail, but it seems like a pretty good bet that cyronics
+        will work: that there's a greater than 10% chance that the technology of the future will be ab
+    </p>
+
+    <p>I</p>
+
+    <p>My primary motivation is preserving optionality. I find it pretty plausible that the equibirium of philosophical reflection
+        will conclude what is valuble is conciousness-moments, rather than people. It might turn out that there isn't a meaningful
+        difference between there being experience moments that have continuity of identity with "me", and there being equally meaningful 
+        experience-moments that don't, in which case cryonics doesn't buy me anything.
+
+        <p><b>However</b>, it seems like like a  </p>
+        
+        that "individual identity", in the sense of "am I the same person that
+        I was 10 years ago, or 10 minutes ago", a confused concept, and as a concequence, valuing the continutiy
+        of the specific person "Eli" 
+    </p>
+    
+
+	<p><a href="policy-index.html">return to policy and public statements index</a></p>
+    </div>
+
+	<div id="last updated"></div>
+	
+	
+	
+	<script>
+		
+		// this part gets the file name from the URL.
+		var urlArray = window.location.href.split("/");
+
+		var nameOfThisPage = urlArray[urlArray.length-1];
+
+		// this part uses the github API to get the last commit data for that file, and then writes a line the HTML body.
+
+		// future Eli, this is a function. It is in Arrow syntax. You should learn this.
+		const getCommits = async pageName => {
+
+			var result = await fetch('https://api.github.com/repos/etyre/elityre.com/commits?path='+ encodeURIComponent(pageName));
+
+			var data = await result.json();
+
+			var timestamp = new Date(data[0].commit.author.date)
+			// the Date function takes a date string, and returns a date object.
+
+			//var month = timestamp.getMonth()
+
+
+			var formattedDate = timestamp.toDateString()
+
+			console.log(formattedDate)
+
+			
+
+
+			document.getElementById('last updated').innerHTML = "<p><br><br><i>This page was last updated on "+ formattedDate + ".</i></p>";
+
+
+			}
+
+			// const data = await getCommits('test');
+			// Make some notes about Await and what it does.
+			// Note that you can only use await inside of an async function.
+			
+			getCommits(nameOfThisPage);
+			
+		</script>
+	
+		</div>
