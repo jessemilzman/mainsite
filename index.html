@@ -45,9 +45,7 @@
 	<p>I intend to fill out a lot more information later, but my track record for doing things later is patchy.</p>
 	
 	<div id="last-updated"></div>
-	
-	
-	
+		
 	<script>
 		
 		// this part gets the file name from the URL.
@@ -55,12 +53,12 @@
 
 		var nameOfThisPage = urlArray[urlArray.length-1];
 
-		// this part uses the github API to get the last commit data for that file, and then writes a line the HTML body.
+		// this part uses the github API to get the last commit date for that file, and then writes a line the HTML body.
 
-		// future Eli, this is a function. It is in Arrow syntax. You should learn this.
+		// future Ricki, this is a function. It is in Arrow syntax. You should learn this.
 		const getCommits = async pageName => {
 
-			var result = await fetch('https://api.github.com/repos/etyre/elityre.com/commits?path='+ encodeURIComponent(pageName));
+			var result = await fetch('https://api.github.com/repos/rickiheicklen/rickiheicklen.github.io/commits?path='+ encodeURIComponent(pageName));
 
 			var data = await result.json();
 
