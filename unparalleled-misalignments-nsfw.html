@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<head> 
+	<title>Ricki Heicklen</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	
+	<!-- Global site tag (gtag.js) // Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-205493387-1"></script>
+	<script>
+  	 window.dataLayer = window.dataLayer || [];
+  	 function gtag(){dataLayer.push(arguments);}
+  	 gtag('js', new Date());
+
+  	 gtag('config', 'UA-205493387-1');
+	</script>
+	
+</head>
+
+
+<body>
+	<!--Navigation bar-->
+	<div id="nav-placeholder">
+	</div>
+	<!--This /\ is where the Nav bar goes on the page.
+	this \/ is the code that goes and gets the nav bar content from nav.html-->
+	<script>
+	$(function(){
+	  $("#nav-placeholder").load("nav.html");
+	});
+	</script>
+	<!--end of Navigation bar-->
+	
+	<div class="page title">
+		<h1>Unparalleled Misalignments</h1>
+	</div>
+	
+	
+<div class="main text">
+	<div>
+	
+	<p>This is the NSFW subset (bottom bracket? lower class?) of <a href="unparalleled-misalignments.html">Unparalleled Misalignments</a>. Peruse at your own risk. </p>
+	
+    <ul>
+
+    <br>
+        <li>Booty call // Butt dial</li>
+        <li>Manual labor // Hand job</li>
+        <li>Casual sex // Lightrail</li>
+        <li>Pregame // Foreplay <!-- (RPH) --></li>
+        <li>Guard rails // Halter tops <!-- (RPH) --></li>
+		<li>Woodworking // Erectile (dys)function <!-- (MB) --></li>
+		<li>Nuts and bolts // Comes and goes <!-- (MB) --> // Humpty Dumpty <!-- (DT) --></li>
+        <li>Pound sign // Sex symbol <!-- (DT) --></li>
+        <li>Union Jack // Mutual masturbation <!-- (???) --></li>
+        <li>Fullback // Fatass <!-- (JF) --></li>
+        <li>Blow job // Drug trade <!-- (JF) --></li>
+        <li>Fuckbuddies // Smash Bros <!-- (UB) --></li>
+        <li>Bottom feeder // Ass eater <!-- (GH) --></li>
+        <li>Smokin' ass // Foggy Bottom <!-- (SR) --></li>
+        <li>Stick vacuum // Cocksucker <!-- (BS) --></li>        
+        <li>Fake shit // Shampoo <!-- (BS) --></li>
+        <li>Gay marriage ban // Fruity cantaloupe <!-- (BS) --></li>
+        <li>Manhole cover // Buttplug <!-- (BS) --></li>
+        <li>House hunting // Domestic abuse <!-- (BS) --></li>
+        <li>Joint venture // Weed trip <!-- (SC) --></li>
+        <li>Bush inauguration // Marijuana legalization <!-- (SC) --></li>
+        <li>Queen mattress // Pillow princess <!-- (SC) --></li>
+        <li>Hitman // Fuckboy <!-- (SC) --></li>
+
+        <!-- playing around with dom/top
+        so dom -- very top?
+        fan dom 
+        con dom
+        king dom 
+        free dom 
+        bore dom 
+
+        tank top 
+        roof top 
+        crop top 
+        halter tops -- guardrails ? 
+        muffin top 
+        carrot top 
+        countertop 
+        laptop 
+        desktop
+        hilltop 
+        stove top  -->
+
+        <!-- playing around with sub/bottom
+        sub zero -- bottomless -->
+    </ul>
+
+	</div>
+
+	<div id="last-updated"></div>
+		
+	<script>
+		
+		// this part gets the file name from the URL.
+		var urlArray = window.location.href.split("/");
+
+		var nameOfThisPage = urlArray[urlArray.length-1];
+
+		// this part uses the github API to get the last commit date for that file, and then writes a line the HTML body.
+
+		// future Ricki, this is a function. It is in Arrow syntax. You should learn this.
+		const getCommits = async pageName => {
+
+			var result = await fetch('https://api.github.com/repos/rickiheicklen/rickiheicklen.github.io/commits?path='+ encodeURIComponent(pageName));
+
+			var data = await result.json();
+
+			var timestamp = new Date(data[0].commit.author.date)
+			// the Date function takes a date string, and returns a date object.
+
+			//var month = timestamp.getMonth()
+
+
+			var formattedDate = timestamp.toDateString()
+
+			console.log(formattedDate)
+
+			
+
+
+			document.getElementById('last-updated').innerHTML = "<p><br><i>This page was last updated on "+ formattedDate + ".</i></p>";
+
+
+			}
+
+			// const data = await getCommits('test');
+			// Make some notes about Await and what it does.
+			// Note that you can only use await inside of an async function.
+			
+			getCommits(nameOfThisPage);
+			
+		</script>
+	</div>
